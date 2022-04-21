@@ -16,7 +16,7 @@ public class Maze_Generator : MonoBehaviour
     private bool countCheck = true;
     private int checkedTotal = 0;
 
-    public float genSpeed;
+    public float genDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,7 @@ public class Maze_Generator : MonoBehaviour
             if (countCheck)
                 checkedTotal++;
 
-            yield return new WaitForSeconds(genSpeed);
+            yield return new WaitForSeconds(genDelay);
         }
     }
 

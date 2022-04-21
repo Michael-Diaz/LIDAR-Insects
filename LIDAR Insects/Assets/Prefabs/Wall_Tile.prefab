@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8874140261252216}
   - component: {fileID: 4012809997430453213}
   - component: {fileID: 1176752488840857367}
+  - component: {fileID: 4082335782315486667}
   m_Layer: 0
   m_Name: Wall_Tile
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4082335782315486667
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816372365520086722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 80, y: 9.999996, z: 80}
+  m_Center: {x: 0, y: 0.00000166893, z: 0}

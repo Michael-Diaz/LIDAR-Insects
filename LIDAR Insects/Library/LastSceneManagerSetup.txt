@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Maze Generation.unity
+- path: Assets/Scenes/Lidar Sim.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
