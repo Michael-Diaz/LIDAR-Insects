@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4012809997430453213}
   - component: {fileID: 1176752488840857367}
   - component: {fileID: 4082335782315486667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall_Tile
   m_TagString: Barrier
   m_Icon: {fileID: 0}

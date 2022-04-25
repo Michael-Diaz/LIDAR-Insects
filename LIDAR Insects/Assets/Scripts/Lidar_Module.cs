@@ -37,21 +37,9 @@ public class Lidar_Module : MonoBehaviour
             if (Physics.Raycast(beam, out hit, 4.5f))
             {
                 Collider[] markerCheck = Physics.OverlapSphere(hit.point, 1.0f, markers);
-                Debug.Log("Num Markers: " + markerCheck.Length);
                 if (markerCheck.Length == 0)
-                {
                     Instantiate(swarmBoundry, hit.point, Quaternion.identity);
-                }
-                else
-                    continue;
             }
         }
-        /*
-        Loop through the array length
-        If there's an hit, get the position from the hit
-            check in a radius from hit position
-                if no object, spawn a vertical marker
-                else skip this portion
-        */
     }
 }

@@ -336,6 +336,9 @@
 "Assets/Scripts/Maze_Generator.cs"
 "Assets/Scripts/Robot_Movement.cs"
 "Assets/Scripts/SimpleCameraController.cs"
+"Assets/Scripts/Swarm_Manager.cs"
+"Assets/Scripts/Swarm_SingleMovement.cs"
+"Assets/Scripts/Swarm_Spawner.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:8.0
 
