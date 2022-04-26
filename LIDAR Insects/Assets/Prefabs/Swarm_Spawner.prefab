@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5076980776580961850}
   - component: {fileID: -1367789111310088806}
+  - component: {fileID: -4340256734939544229}
   m_Layer: 0
   m_Name: Swarm_Spawner
   m_TagString: Untagged
@@ -44,5 +45,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5942610633590220320, guid: a7828736edee268478d5fe897d3a6cfa, type: 3}
-  spawnRadius: 10
-  spawnCount: 10
+  spawnRadius: 1
+  spawnCount: 100
+--- !u!114 &-4340256734939544229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840760240862035767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05242ba4a8fb864297a466c52b48055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compute: {fileID: 7200000, guid: 169ba74bf72069f4b8b087bd9b3d83d0, type: 3}

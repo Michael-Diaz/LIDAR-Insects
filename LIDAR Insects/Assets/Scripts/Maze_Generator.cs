@@ -8,6 +8,7 @@ public class Maze_Generator : MonoBehaviour
 
     private GameObject[,] rooms;
     public int size;
+    public Vector2 goal = new Vector2();
 
     private Stack<Vector2> trace = new Stack<Vector2>();
     private Vector2 currPos = new Vector2(0, 0);
@@ -22,8 +23,10 @@ public class Maze_Generator : MonoBehaviour
     void Start()
     {
         rooms = new GameObject[size, size];
-
         roomsChecked = new bool[size, size];
+
+        goal.x = Random.Range(1, size);
+        goal.y = Random.Range(1, size);
 
         StartCoroutine(Generate());
     }
@@ -33,7 +36,17 @@ public class Maze_Generator : MonoBehaviour
     {
         for (int i = 0; i < size; i++)
             for (int j = 0; j < size; j++)
+            {
                 rooms[i, j] = Instantiate(roomPrefab, new Vector3(j * 4.0f, 0.0f, i * 4.0f), Quaternion.identity) as GameObject;
+                if (i == 0 && j == 0)
+                {
+                    rooms[i, j].transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                }
+                else if (j == goal.x && i == goal.y)
+                {
+                    rooms[i, j].transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                }
+            }
 
         int roomTotal = size * size;
 

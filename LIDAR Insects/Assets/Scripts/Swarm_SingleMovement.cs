@@ -34,7 +34,7 @@ public class Swarm_SingleMovement : MonoBehaviour {
         position = cachedTransform.position;
         forward = cachedTransform.forward;
 
-        velocity = transform.forward * 3.5f;
+        velocity = transform.forward;
     }
 
     public void UpdateBoid () {
@@ -102,14 +102,39 @@ public class Swarm_SingleMovement : MonoBehaviour {
             rayDirections[i] = new Vector3 (x, y, z);
         }
 
+        // Find target using layermask
+        bool targetFound = false;
+        bool vectorFound = false;
+        Vector3 tempDir = Vector3.zero;
+
+        RaycastHit hit;
         for (int i = 0; i < rayDirections.Length; i++) {
             Vector3 dir = cachedTransform.TransformDirection (rayDirections[i]);
             Ray ray = new Ray (position, dir);
-            if (!Physics.SphereCast (ray, 0.3f, 2.0f)) {
-                return dir;
+
+            if (!targetFound)
+            {
+                if (Physics.SphereCast (ray, 0.3f, out hit, 2.0f)) {
+                    if (hit.collider.gameObject.tag == "Swarm_Target(Clone)")
+                    {
+                        tempDir = dir;
+                        targetFound = true;
+                    }
+                }
+                else
+                {
+                    if (!vectorFound)
+                    {
+                        tempDir = dir;
+                        vectorFound = true;
+                    }
+                }
             }
         }
 
+        if (vectorFound || targetFound)
+            return tempDir;
+        
         return forward;
     }
 

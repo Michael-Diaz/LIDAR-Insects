@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1360701983155650129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor_Unit
-  m_TagString: Untagged
+  m_TagString: Bound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +42,10 @@ PrefabInstance:
     - target: {fileID: 4197193018184483831, guid: 9fc25ce3a51ec8740a34aae88df2c530, type: 3}
       propertyPath: m_Name
       value: Floor_Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197193018184483831, guid: 9fc25ce3a51ec8740a34aae88df2c530, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7627611052499340798, guid: 9fc25ce3a51ec8740a34aae88df2c530, type: 3}
       propertyPath: m_RootOrder
@@ -104,6 +108,10 @@ PrefabInstance:
     - target: {fileID: 69514176462840467, guid: f3aa2a5495350124a9c87c46b2b3c872, type: 3}
       propertyPath: m_Name
       value: Floor_Tiles
+      objectReference: {fileID: 0}
+    - target: {fileID: 69514176462840467, guid: f3aa2a5495350124a9c87c46b2b3c872, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6016653438347225348, guid: f3aa2a5495350124a9c87c46b2b3c872, type: 3}
       propertyPath: m_RootOrder

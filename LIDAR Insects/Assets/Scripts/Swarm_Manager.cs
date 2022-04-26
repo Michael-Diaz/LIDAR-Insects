@@ -12,7 +12,7 @@ public class Swarm_Manager : MonoBehaviour {
     void Start () {
         boids = FindObjectsOfType<Swarm_SingleMovement> ();
         foreach (Swarm_SingleMovement b in boids) {
-            b.Initialize (null);
+            b.Initialize (GameObject.Find("Swarm_Target(Clone)").GetComponent<Transform>());
         }
 
     }
